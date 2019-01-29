@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.*;
 
 public final class InternalNode implements Node{
   

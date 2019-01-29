@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.*;
 
 public interface Node {
   public List<Token> toList();
