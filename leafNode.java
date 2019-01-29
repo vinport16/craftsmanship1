@@ -1,3 +1,5 @@
+import Java.util.List;
+
 public final class LeafNode implements Node{
   
   private final Token token;

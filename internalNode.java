@@ -1,3 +1,5 @@
+import Java.util.List;
+
 public final class InternalNode implements Node{
   
   private final List<Node> children;
