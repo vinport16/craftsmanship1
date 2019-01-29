@@ -1,4 +1,4 @@
-import Java.util.List;
+import java.util.*;
 
 public final class LeafNode implements Node{
   
