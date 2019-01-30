@@ -8,8 +8,16 @@ public final class InternalNode implements Node{
   private List<Token> computedTokenList;
 
   private InternalNode(List<Node> childs){
-    // change this so that children = a copy of childs, not the actual childs
-    children = childs;
+    // childs are copied before being put in children
+    children = new ArrayList<Node>();
+    for(Node child : childs){
+      if(child instanceof InternalNode){
+        children.add(((InternalNode)child).build(((InternalNode)child).getChildren()));
+      }else{
+        // child is a leaf node
+        children.add(((LeafNode)child).build(((LeafNode)child).getToken()));
+      }
+    }
   }
 
   public InternalNode build(List<Node> childs){
