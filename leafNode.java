@@ -15,6 +15,10 @@ public final class LeafNode implements Node{
     return new LeafNode(t);
   }
 
+  public Token getToken(){
+    return token;
+  }
+
   public String toString(){
     return token.toString();
   }
