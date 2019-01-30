@@ -21,9 +21,9 @@ public final class InternalNode implements Node{
     return children;
   }
 
-  public final toList(){
-    list = new List<Token>();
-    for(Token child : children){
+  public final List<Token> toList(){
+    List<Token> list = new ArrayList<Token>();
+    for(Node child : children){
       list.addAll(child.toList());
     }
     return list;
