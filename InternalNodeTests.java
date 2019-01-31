@@ -2,7 +2,7 @@ package parser;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThrows;
+//import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.fail;
 
 import java.util.Arrays;
@@ -14,12 +14,18 @@ import org.junit.Test;
 
 class InternalNodeTests {
 
-	@Test
+	@Test(expected = NullPointerException.class) 
+	public void testInternalNodeFailsOnNull() { 
+	     InternalNode.build(null);
+	}
+
+/*	@Test
 	void testInternalNodeFailsOnNull() {
 		assertThrows(NullPointerException.class, () -> {
 			InternalNode.build(null);
 		});
 	}
+*/
 
 	@Test
 	void testInternalNodesNotCached() {

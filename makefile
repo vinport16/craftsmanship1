@@ -8,4 +8,9 @@ all:
 	javac Node.java
 	javac LeafNode.java
 	javac InternalNode.java
+	javac -cp junit-4.10.jar;. InternalNodeTests.java
 	javac Tests.java
+
+clean:
+	rm *.class
+	rm org.junit.*
