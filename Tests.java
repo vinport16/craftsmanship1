@@ -10,7 +10,7 @@ import org.junit.runner.notification.Failure;
 public class Tests {
 
     public static void main(String[] args){
-      Result result = JUnitCore.runClasses(InternalNodeTest.class);
+      Result result = JUnitCore.runClasses(InternalNodeTests.class);
       for (Failure failure : result.getFailures()) {
         System.out.println(failure.toString());
       }

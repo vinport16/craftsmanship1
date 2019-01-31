@@ -8,4 +8,9 @@ all:
 	javac Node.java
 	javac LeafNode.java
 	javac InternalNode.java
+	javac InternalNodeTests.java
 	javac Tests.java
+
+clean:
+	rm *.class
+	rm org.junit.*

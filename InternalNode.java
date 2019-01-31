@@ -60,4 +60,20 @@ public final class InternalNode implements Node{
     }
     return computedString;
   }
+
+  public static void main(String[] args) {
+    Connector a = Connector.build(TerminalSymbol.PLUS);
+    System.out.println(a.getType());
+    System.out.println(a);
+    LeafNode l = LeafNode.build(a);
+    System.out.println(l.getToken());
+    System.out.println(l);
+    System.out.println(l.toList());
+    List<Node> ll = new ArrayList<>();
+    ll.add(l);
+    InternalNode il = InternalNode.build(ll);
+    System.out.println(il.getChildren());
+    System.out.println(il.toList());
+    System.out.println(il);
+  }
 }

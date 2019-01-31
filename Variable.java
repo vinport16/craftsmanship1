@@ -2,7 +2,7 @@ public final class Variable extends AbstractToken {
 
 	private TerminalSymbol type = TerminalSymbol.VARIABLE;
 	private final String representation;
-	private static Cache<String, Variable> cache;
+	private static Cache<String, Variable> cache = new Cache<String, Variable>();
 
 	private Variable(String representation) {
 		this.representation = representation;
@@ -21,7 +21,7 @@ public final class Variable extends AbstractToken {
 	public static final Variable build(String representation) {
 		if (representation == null) {
 			throw new NullPointerException("representation provided is null");
-		} else if (cache.containsKey(representation)) {
+		} else if(cache.containsKey(representation)) {
 			return cache.get(representation, rep -> new Variable(rep));
 		} else {
 			return new Variable(representation);

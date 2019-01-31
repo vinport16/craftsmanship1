@@ -1,4 +1,4 @@
-package parser;
+//package parser;
 
 import static org.junit.Assert.*;
 
@@ -11,12 +11,18 @@ import org.junit.*;
 
 class InternalNodeTests {
 
-	@Test
+	@Test(expected = NullPointerException.class) 
+	public void testInternalNodeFailsOnNull() { 
+	     InternalNode.build(null);
+	}
+
+/*	@Test
 	void testInternalNodeFailsOnNull() {
 		assertThrows(NullPointerException.class, () -> {
 			InternalNode.build(null);
 		});
 	}
+*/
 
 	@Test
 	void testInternalNodesNotCached() {

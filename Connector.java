@@ -1,7 +1,7 @@
 public final class Connector extends AbstractToken {
 
 	TerminalSymbol type;
-	private static Cache<TerminalSymbol, Connector> cache;
+	private static Cache<TerminalSymbol, Connector> cache = new Cache<TerminalSymbol, Connector>();
 
 	private Connector(TerminalSymbol type) {
 		this.type = type;
