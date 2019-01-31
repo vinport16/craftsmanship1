@@ -36,7 +36,7 @@ public final class Connector extends AbstractToken {
 			case TIMES:
 				return "*";
 			case DIVIDE:
-				return "-";
+				return "/";
 			case OPEN:
 				return "(";
 			case CLOSE:

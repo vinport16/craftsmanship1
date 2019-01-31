@@ -8,7 +8,7 @@ public final class LeafNode implements Node{
     token = t;
   }
 
-  public LeafNode build(Token t){
+  public static LeafNode build(Token t){
     if(t == null){
       throw new NullPointerException("Cannot build LeafNode with null token");
     }

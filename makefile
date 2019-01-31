@@ -8,3 +8,4 @@ all:
 	javac Node.java
 	javac LeafNode.java
 	javac InternalNode.java
+	javac Tests.java

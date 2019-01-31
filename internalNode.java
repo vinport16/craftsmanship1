@@ -20,7 +20,7 @@ public final class InternalNode implements Node{
     }
   }
 
-  public InternalNode build(List<Node> childs){
+  public static InternalNode build(List<Node> childs){
     if(childs == null){
       throw new NullPointerException("Cannot build InternalNode with null children");
     }
