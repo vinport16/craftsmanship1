@@ -8,7 +8,7 @@ all:
 	javac Node.java
 	javac LeafNode.java
 	javac InternalNode.java
-	javac -cp junit-4.10.jar;. InternalNodeTests.java
+	javac InternalNodeTests.java
 	javac Tests.java
 
 clean:

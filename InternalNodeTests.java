@@ -1,4 +1,4 @@
-package parser;
+//package parser;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -12,7 +12,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-class InternalNodeTests {
+public class InternalNodeTests {
 
 	@Test(expected = NullPointerException.class) 
 	public void testInternalNodeFailsOnNull() { 
@@ -28,13 +28,14 @@ class InternalNodeTests {
 */
 
 	@Test
-	void testInternalNodesNotCached() {
+	public void testInternalNodesNotCached() {
 		List<Node> children = new LinkedList<>();
 		children.add(LeafNode.build(Variable.build("a")));
 		children.add(LeafNode.build(Connector.build(TerminalSymbol.TIMES)));
 		children.add(LeafNode.build(Variable.build("b")));
 		
-		assertFalse(InternalNode.build(children) == InternalNode.build(children));
+		//assertFalse(InternalNode.build(children) == InternalNode.build(children));
+		assertFalse("Hello", true);
 	}
 	
 }
