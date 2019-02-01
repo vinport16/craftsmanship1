@@ -2,13 +2,6 @@ import static org.junit.Assert.*;
 import org.junit.*;
 
 public class CacheTests {
-	
-	@Test
-	public void testCacheContainsKey() {
-		Cache<String, String> c = new Cache<String, String>();
-		c.get("Hello", s -> "World");
-		assertTrue("Does not contain key just added", c.containsKey("Hello"));
-	}
 
 	@Test(expected = NullPointerException.class) 
 	public void testCacheGetFailsOnKeyNull() {

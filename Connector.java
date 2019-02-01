@@ -6,10 +6,12 @@ public final class Connector extends AbstractToken {
 	private static Cache<TerminalSymbol, Connector> cache = new Cache<TerminalSymbol, Connector>();
 	private static HashMap<TerminalSymbol, String> map = new HashMap<TerminalSymbol, String>();
 
+	// Private constructor to set type field
 	private Connector(TerminalSymbol type) {
 		this.type = type;
 	}
 
+	// Populates hashmap field with mapping from TerminalSymbol enum to String
 	private void populateMap() {
 		map.put(TerminalSymbol.PLUS, "+");
 		map.put(TerminalSymbol.MINUS, "-");
@@ -19,6 +21,7 @@ public final class Connector extends AbstractToken {
 		map.put(TerminalSymbol.CLOSE, ")");
 	}
 
+	// Getter method for type
 	public TerminalSymbol getType() {
 		return type;
 	}
@@ -39,6 +42,7 @@ public final class Connector extends AbstractToken {
 		}
 	}
 
+	// Overrides toString method, returns string representation of TerminalSymbol
 	public String toString() {
 		if (map.isEmpty()) {
 			populateMap();
