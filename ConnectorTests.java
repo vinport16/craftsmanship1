@@ -1,10 +1,4 @@
 import static org.junit.Assert.*;
-
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.junit.*;
 
 public class ConnectorTests {
@@ -39,16 +33,5 @@ public class ConnectorTests {
 	public void testConnectorToString() {
 		Connector c = Connector.build(TerminalSymbol.PLUS);
 		assertEquals("+", c.toString());
-	}
-
-	@Test
-	public void testInternalNodesNotCached() {
-		List<Node> children = new LinkedList<>();
-		children.add(LeafNode.build(Variable.build("a")));
-		children.add(LeafNode.build(Connector.build(TerminalSymbol.TIMES)));
-		children.add(LeafNode.build(Variable.build("b")));
-		
-		//assertFalse(InternalNode.build(children) == InternalNode.build(children));
-		assertFalse("Hello", true);
 	}
 }

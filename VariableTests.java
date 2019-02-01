@@ -1,10 +1,4 @@
 import static org.junit.Assert.*;
-
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.junit.*;
 
 public class VariableTests {
@@ -15,13 +9,13 @@ public class VariableTests {
 	}
 
 	// @Test
-	// public void testConnectorBuildNotCached() {
+	// public void testVariableBuildNotCached() {
 	// 	assertEquals("TerminalSymbol is not ADD", Connector.build(TerminalSymbol.ADD));
 	// }
 
 	// @Test
-	// public void testConnectorBuildCached() {
-	// 	Connector.build(TerminalSymbol.ADD);
+	// public void testVariableBuildCached() {
+	// 	Variable.build("a");
 	// }
 
 	@Test
