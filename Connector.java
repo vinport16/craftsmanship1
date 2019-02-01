@@ -1,10 +1,22 @@
+import java.util.HashMap;
+
 public final class Connector extends AbstractToken {
 
 	TerminalSymbol type;
 	private static Cache<TerminalSymbol, Connector> cache = new Cache<TerminalSymbol, Connector>();
+	private static HashMap<TerminalSymbol, String> map = new HashMap<TerminalSymbol, String>();
 
 	private Connector(TerminalSymbol type) {
 		this.type = type;
+	}
+
+	private void populateMap() {
+		map.put(TerminalSymbol.PLUS, "+");
+		map.put(TerminalSymbol.MINUS, "-");
+		map.put(TerminalSymbol.TIMES, "*");
+		map.put(TerminalSymbol.DIVIDE, "/");
+		map.put(TerminalSymbol.OPEN, "(");
+		map.put(TerminalSymbol.CLOSE, ")");
 	}
 
 	public TerminalSymbol getType() {
@@ -28,21 +40,9 @@ public final class Connector extends AbstractToken {
 	}
 
 	public String toString() {
-		switch(type) {
-			case PLUS:
-				return "+";
-			case MINUS:
-				return "-";
-			case TIMES:
-				return "*";
-			case DIVIDE:
-				return "/";
-			case OPEN:
-				return "(";
-			case CLOSE:
-				return ")";
-			default:
-				return "";
+		if (map.isEmpty()) {
+			populateMap();
 		}
+		return map.get(type);
 	}
 }

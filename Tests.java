@@ -15,8 +15,19 @@ public class Tests {
       for (Failure failure : result.getFailures()) {
         System.out.println(failure.toString());
       }
-
       result = JUnitCore.runClasses(LeafNodeTests.class);
+      for (Failure failure : result.getFailures()) {
+        System.out.println(failure.toString());
+      }
+      result = JUnitCore.runClasses(CacheTests.class);
+      for (Failure failure : result.getFailures()) {
+        System.out.println(failure.toString());
+      }
+      result = JUnitCore.runClasses(VariableTests.class);
+      for (Failure failure : result.getFailures()) {
+        System.out.println(failure.toString());
+      }
+      result = JUnitCore.runClasses(ConnectorTests.class);
       for (Failure failure : result.getFailures()) {
         System.out.println(failure.toString());
       }

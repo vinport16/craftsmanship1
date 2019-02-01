@@ -9,6 +9,10 @@ all:
 	javac LeafNode.java
 	javac InternalNode.java
 	javac InternalNodeTests.java
+	javac LeafNodeTests.java
+	javac VariableTests.java
+	javac ConnectorTests.java
+	javac CacheTests.java
 	javac Tests.java
 
 clean:
