@@ -8,7 +8,7 @@ final class Cache<T, V> {
 	private Map<T, V> cache = new HashMap<T, V>();
 
 	// Checks if key contained in cache
-	private boolean containsKey(T key) {
+	public boolean containsKey(T key) {
 		return cache.containsKey(key);
 	}
 
